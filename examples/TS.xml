@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Pport xmlns="http://www.thalesgroup.com/rtti/PushPort/v16"
+    xmlns:ns2="http://www.thalesgroup.com/rtti/PushPort/Schedules/v3"
+    xmlns:ns3="http://www.thalesgroup.com/rtti/PushPort/Schedules/v2"
+    xmlns:ns4="http://www.thalesgroup.com/rtti/PushPort/Formations/v2"
+    xmlns:ns5="http://www.thalesgroup.com/rtti/PushPort/Forecasts/v3"
+    xmlns:ns6="http://www.thalesgroup.com/rtti/PushPort/Formations/v1"
+    xmlns:ns7="http://www.thalesgroup.com/rtti/PushPort/StationMessages/v1"
+    xmlns:ns8="http://www.thalesgroup.com/rtti/PushPort/TrainAlerts/v1"
+    xmlns:ns9="http://www.thalesgroup.com/rtti/PushPort/TrainOrder/v1"
+    xmlns:ns10="http://www.thalesgroup.com/rtti/PushPort/TDData/v1"
+    xmlns:ns11="http://www.thalesgroup.com/rtti/PushPort/Alarms/v1"
+    xmlns:ns12="http://thalesgroup.com/RTTI/PushPortStatus/root_1" ts="2024-03-14T00:30:28.8985086Z" version="16.0">
+    <uR updateOrigin="TD">
+        <TS rid="202403136720685" uid="C20685" ssd="2024-03-13">
+            <ns5:Location tpl="COATBDS" wtp="00:32">
+                <ns5:pass et="00:32" src="TD"/>
+                <ns5:plat platsup="true" cisPlatsup="true" platsrc="A">2</ns5:plat>
+            </ns5:Location>
+            <ns5:Location tpl="COATDYK" wtp="00:34">
+                <ns5:pass et="00:34" src="Darwin"/>
+                <ns5:plat platsup="true" cisPlatsup="true">2</ns5:plat>
+            </ns5:Location>
+            <ns5:Location tpl="AIRDRIE" wtp="00:36">
+                <ns5:pass et="00:36" src="Darwin"/>
+                <ns5:plat platsup="true" cisPlatsup="true">3</ns5:plat>
+            </ns5:Location>
+            <ns5:Location tpl="BTHGATE" wtp="00:50">
+                <ns5:pass et="00:50" src="Darwin"/>
+                <ns5:plat platsup="true" cisPlatsup="true">1</ns5:plat>
+            </ns5:Location>
+            <ns5:Location tpl="UPHALL" wtp="00:55">
+                <ns5:pass et="00:55" src="Darwin"/>
+                <ns5:plat platsup="true" cisPlatsup="true" platsrc="A">1</ns5:plat>
+            </ns5:Location>
+            <ns5:Location tpl="NWBG" wtp="01:00">
+                <ns5:pass et="01:00" src="Darwin"/>
+            </ns5:Location>
+            <ns5:Location tpl="EDINPRK" wtp="01:04">
+                <ns5:pass et="01:03" src="Darwin"/>
+                <ns5:plat platsup="true" cisPlatsup="true" platsrc="A">1</ns5:plat>
+            </ns5:Location>
+            <ns5:Location tpl="HAYMRWJ" wtp="01:06:30">
+                <ns5:pass et="01:05" src="Darwin"/>
+            </ns5:Location>
+            <ns5:Location tpl="HAYMRKT" wtp="01:07:30">
+                <ns5:pass et="01:06" src="Darwin"/>
+                <ns5:plat platsup="true" cisPlatsup="true">3</ns5:plat>
+            </ns5:Location>
+            <ns5:Location tpl="PRNCSTG" wtp="01:09">
+                <ns5:pass et="01:07" src="Darwin"/>
+            </ns5:Location>
+            <ns5:Location tpl="EDINBUR" wta="01:11" pta="01:11">
+                <ns5:arr et="01:11" wet="01:09" src="Darwin"/>
+                <ns5:plat>2</ns5:plat>
+            </ns5:Location>
+        </TS>
+    </uR>
+</Pport>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Pport xmlns="http://www.thalesgroup.com/rtti/PushPort/v16"
+    xmlns:ns2="http://www.thalesgroup.com/rtti/PushPort/Schedules/v3"
+    xmlns:ns3="http://www.thalesgroup.com/rtti/PushPort/Schedules/v2"
+    xmlns:ns4="http://www.thalesgroup.com/rtti/PushPort/Formations/v2"
+    xmlns:ns5="http://www.thalesgroup.com/rtti/PushPort/Forecasts/v3"
+    xmlns:ns6="http://www.thalesgroup.com/rtti/PushPort/Formations/v1"
+    xmlns:ns7="http://www.thalesgroup.com/rtti/PushPort/StationMessages/v1"
+    xmlns:ns8="http://www.thalesgroup.com/rtti/PushPort/TrainAlerts/v1"
+    xmlns:ns9="http://www.thalesgroup.com/rtti/PushPort/TrainOrder/v1"
+    xmlns:ns10="http://www.thalesgroup.com/rtti/PushPort/TDData/v1"
+    xmlns:ns11="http://www.thalesgroup.com/rtti/PushPort/Alarms/v1"
+    xmlns:ns12="http://thalesgroup.com/RTTI/PushPortStatus/root_1" ts="2024-03-14T00:58:00.2195086Z" version="16.0">
+    <uR updateOrigin="Darwin">
+        <deactivated rid="202403148760831"/>
+    </uR>
+</Pport>

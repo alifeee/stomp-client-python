@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Pport xmlns="http://www.thalesgroup.com/rtti/PushPort/v16"
+    xmlns:ns2="http://www.thalesgroup.com/rtti/PushPort/Schedules/v3"
+    xmlns:ns3="http://www.thalesgroup.com/rtti/PushPort/Schedules/v2"
+    xmlns:ns4="http://www.thalesgroup.com/rtti/PushPort/Formations/v2"
+    xmlns:ns5="http://www.thalesgroup.com/rtti/PushPort/Forecasts/v3"
+    xmlns:ns6="http://www.thalesgroup.com/rtti/PushPort/Formations/v1"
+    xmlns:ns7="http://www.thalesgroup.com/rtti/PushPort/StationMessages/v1"
+    xmlns:ns8="http://www.thalesgroup.com/rtti/PushPort/TrainAlerts/v1"
+    xmlns:ns9="http://www.thalesgroup.com/rtti/PushPort/TrainOrder/v1"
+    xmlns:ns10="http://www.thalesgroup.com/rtti/PushPort/TDData/v1"
+    xmlns:ns11="http://www.thalesgroup.com/rtti/PushPort/Alarms/v1"
+    xmlns:ns12="http://thalesgroup.com/RTTI/PushPortStatus/root_1" ts="2024-03-14T00:57:35.5705086Z" version="16.0">
+    <uR updateOrigin="CIS" requestSource="BB02" requestID="34553780444">
+        <schedule rid="202403147619193" uid="L19193" trainId="1K96" ssd="2024-03-14" toc="LE" trainCat="XX">
+            <ns2:OR wtd="22:10" tpl="STANAIR" act="TB" ptd="22:10"/>
+            <ns2:PP wtp="22:11:30" tpl="STANCLJ"/>
+            <ns2:PP wtp="22:13" tpl="TYEGRNJ"/>
+            <ns2:PP wtp="22:13:30" tpl="STANEJN"/>
+            <ns2:PP wtp="22:15" tpl="STANNJN"/>
+            <ns2:IP wta="22:22:30" wtd="22:23:30" tpl="AUDLEYE" act="T " pta="22:23" ptd="22:23"/>
+            <ns2:IP wta="22:30:30" wtd="22:31:30" tpl="WTLESFD" act="T " pta="22:31" ptd="22:31"/>
+            <ns2:PP wtp="22:38" tpl="SHPRTBJ"/>
+            <ns2:IP wta="22:45" wtd="22:57" tpl="CAMBDGE" act="T " pta="22:45" ptd="22:57"/>
+            <ns2:PP wtp="22:59" tpl="CLDHMLJ"/>
+            <ns2:IP wta="23:01" wtd="23:02" tpl="CAMBNTH" act="T " pta="23:01" ptd="23:02"/>
+            <ns2:PP wtp="23:05" tpl="WATBECH"/>
+            <ns2:PP wtp="23:12" tpl="ELYYDLN"/>
+            <ns2:IP wta="23:13" wtd="23:14" tpl="ELYY" act="T " pta="23:13" ptd="23:14"/>
+            <ns2:PP wtp="23:16:30" tpl="ELYYNJN"/>
+            <ns2:IP wta="23:29" wtd="23:30" tpl="BNDON" act="T " pta="23:29" ptd="23:30"/>
+            <ns2:IP wta="23:36:30" wtd="23:37:30" tpl="THETFD" act="T " pta="23:37" ptd="23:37"/>
+            <ns2:IP wta="23:51:30" wtd="23:52:30" tpl="ATTLBON" act="T " pta="23:52" ptd="23:52"/>
+            <ns2:IP wta="23:58:30" wtd="23:59:30" tpl="WYMNDHM" act="T " pta="23:59" ptd="23:59"/>
+            <ns2:PP wtp="00:03:30" tpl="WYMN877"/>
+            <ns2:PP wtp="00:09:30" tpl="TROWSEJ"/>
+            <ns2:PP wtp="00:10:30" tpl="TRWSSBJ"/>
+            <ns2:PP wtp="00:11" tpl="NRCHTPJ"/>
+            <ns2:DT wta="00:13" pta="00:13" tpl="NRCH" act="TF"/>
+        </schedule>
+    </uR>
+</Pport>
