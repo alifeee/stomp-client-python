@@ -25,6 +25,7 @@ import socket
 import logging
 import stomp
 from dotenv import load_dotenv
+import pickle
 
 load_dotenv()
 
@@ -65,6 +66,7 @@ if USERNAME == "":
 
 
 def connect_and_subscribe(connection):
+    """Connect to STOMP and subscribe to the topic"""
     if stomp.__version__[0] < 5:
         connection.start()
 
@@ -81,14 +83,16 @@ def connect_and_subscribe(connection):
 
 
 class StompClient(stomp.ConnectionListener):
+    """Client to listen to STOMP"""
+
     def on_heartbeat(self):
         logging.info("Received a heartbeat")
 
     def on_heartbeat_timeout(self):
         logging.error("Heartbeat timeout")
 
-    def on_error(self, headers, message):
-        logging.error(message)
+    # def on_error(self, headers, message):
+    # logging.error(message)
 
     def on_disconnected(self):
         logging.warning(
@@ -98,11 +102,14 @@ class StompClient(stomp.ConnectionListener):
         sys.exit(-1)
 
     def on_connecting(self, host_and_port):
-        logging.info("Connecting to " + host_and_port[0])
+        logging.info("Connecting to %s", host_and_port[0])
 
     def on_message(self, frame):
-        logging.info(frame)
+        # logging.info(frame)
         try:
+            # if frame.headers["MessageType"] in ["TS", "OW", "SC", "AS"]:
+            #     print("skipping...")
+            #     return
             logging.info(
                 "Message sequence=%s, type=%s received",
                 frame.headers["SequenceNumber"],
@@ -113,11 +120,23 @@ class StompClient(stomp.ConnectionListener):
             bio.seek(0)
             msg = zlib.decompress(frame.body, zlib.MAX_WBITS | 32)
             logging.debug(msg)
-            obj = PPv16.CreateFromDocument(msg)
-            logging.info(
-                "Successfully received a Darwin Push Port message from %s", obj.ts
-            )
-            logging.debug("Raw XML=%s", msg)
+
+            # open pickle file, and append to array, then save
+            FILE = "msg.pkl"
+            try:
+                with open(FILE, "rb") as f:
+                    msgs = pickle.load(f)
+            except FileNotFoundError:
+                msgs = []
+            msgs.append(msg)
+            with open(FILE, "wb") as f:
+                pickle.dump(msgs, f)
+
+            # obj = PPv16.CreateFromDocument(msg)
+            # logging.info(
+            #     "Successfully received a Darwin Push Port message from %s", obj.ts
+            # )
+            # logging.debug("Raw XML=%s", msg)
         except Exception as e:
             logging.error(str(e))
 
