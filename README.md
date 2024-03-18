@@ -12,9 +12,9 @@ to the 'Darwin' feed.
 Configuration
 -------------
 
-Edit `opendata-nationalrail-client.py` and set the `USERNAME`, `PASSWORD`,
+Create a `.env` file and set the `USERNAME`, `PASSWORD`,
 `HOSTNAME` and `HOSTPORT` variables to the values shown in 'Username', 'Password',
-'Messaging host' and 'STOMP Port' on the 'My Feeds' page.
+'Messaging host' and 'STOMP Port' on the 'My Feeds' page on <https://opendata.nationalrail.co.uk/feeds>. An example `.env` file is [`.env.example`](.env.example).
 
 ![Screenshot of page where USERNAME, PASSWORD, et cetera are stored](images/opendata_info.png)
 
@@ -32,7 +32,11 @@ let you run the client in a loop, such as through a shell script, and protect
 against you accidentally degrading the service for everyone by reconnecting far
 too frequently.
 
-Finally, install the required dependencies by running `pip install -r requirements.txt`.
+Finally, install the required dependencies by running `pip install -r requirements.txt`, and run
+
+```bash
+python opendata-nationalrail-client.py
+```
 
 Generating classes
 ------------------
