@@ -76,6 +76,16 @@ similar to the following:
 To adapt this code for your own purposes, extend the `on_message()` method and process the contents of the `obj`
 created.
 
+Docker
+------
+
+To run with Docker:
+
+```bash
+docker build -t nationalrail-stomp-client .
+docker run -it --rm --name nationalrail-stomp-listener nationalrail-stomp-client
+```
+
 Support
 -------
 
