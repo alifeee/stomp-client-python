@@ -121,6 +121,12 @@ class StompClient(stomp.ConnectionListener):
             msg = zlib.decompress(frame.body, zlib.MAX_WBITS | 32)
             logging.debug(msg)
 
+            obj = PPv16.CreateFromDocument(msg)
+            logging.info(
+                "Successfully received a Darwin Push Port message from %s", obj.ts
+            )
+            logging.info("object: %s", obj)
+
             # open pickle file, and append to array, then save
             FILE = "msg.pkl"
             try:
@@ -128,15 +134,14 @@ class StompClient(stomp.ConnectionListener):
                     msgs = pickle.load(f)
             except FileNotFoundError:
                 msgs = []
-            msgs.append(msg)
+            msgs.append(obj)
             with open(FILE, "wb") as f:
                 pickle.dump(msgs, f)
 
-            # obj = PPv16.CreateFromDocument(msg)
-            # logging.info(
-            #     "Successfully received a Darwin Push Port message from %s", obj.ts
-            # )
             # logging.debug("Raw XML=%s", msg)
+        except KeyboardInterrupt:
+            logging.info("Exiting...")
+            sys.exit(0)
         except Exception as e:
             logging.error(str(e))
 
